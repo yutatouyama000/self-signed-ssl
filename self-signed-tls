@@ -151,22 +151,12 @@ default_bits = 2048
 prompt = no
 default_md = sha256
 distinguished_name = dn
-x509_extensions = v3_ca
 req_extensions = v3_req
-x509_extensions = usr_cert
 
 [v3_req]
 basicConstraints=CA:FALSE
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
 subjectAltName = @alt_names
-
-[user_cert]
-authorityKeyIdentifier=keyid,issuer
-basicConstraints=CA:FALSE
-keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
-subjectAltName = @alt_names
-subjectKeyIdentifier=hash
-nsComment = "OpenSSL Generated Certificate"
 
 [alt_names]
 DNS.1 = ${CN}
