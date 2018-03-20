@@ -152,6 +152,7 @@ prompt = no
 default_md = sha256
 distinguished_name = dn
 req_extensions = v3_req
+x509_extensions = alt_names
 
 [v3_req]
 basicConstraints=CA:FALSE
